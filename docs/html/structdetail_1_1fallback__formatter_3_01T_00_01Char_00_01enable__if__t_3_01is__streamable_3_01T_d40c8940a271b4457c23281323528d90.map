@@ -1,0 +1,5 @@
+<map id="detail::fallback_formatter&lt; T, Char, enable_if_t&lt; is_streamable&lt; T, Char &gt;::value &gt; &gt;" name="detail::fallback_formatter&lt; T, Char, enable_if_t&lt; is_streamable&lt; T, Char &gt;::value &gt; &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="5,184,200,255"/>
+<area shape="rect" id="node2" href="$structbasic__ostream__formatter.html" title=" " alt="" coords="9,95,196,136"/>
+<area shape="rect" id="node3" href="$structformatter.html" title=" " alt="" coords="14,5,191,47"/>
+</map>

@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['beige_0',['beige',['../color_8h.html#a80d1dc5f416b97f92939a4166d41203caefc5f4b470619b932aed03953e50ce60',1,'color.h']]],
+  ['bin_5flower_1',['bin_lower',['../core_8h.html#adfa139c9a1902753b3696794759b2c48a2e9d2820a44d3b4e9677aa880694ae1d',1,'core.h']]],
+  ['bin_5fupper_2',['bin_upper',['../core_8h.html#adfa139c9a1902753b3696794759b2c48a76681d3b581bdd3d96a61d9ee68a2f0e',1,'core.h']]],
+  ['bisque_3',['bisque',['../color_8h.html#a80d1dc5f416b97f92939a4166d41203cac7357031b08389007e6da9f56ea145e0',1,'color.h']]],
+  ['black_4',['black',['../color_8h.html#a80d1dc5f416b97f92939a4166d41203ca1ffd9e753c8054cc61456ac7fac1ac89',1,'black():&#160;color.h'],['../color_8h.html#a76f7aa9aae46c2ea7333dae7b531d6aca1ffd9e753c8054cc61456ac7fac1ac89',1,'black():&#160;color.h']]],
+  ['blanched_5falmond_5',['blanched_almond',['../color_8h.html#a80d1dc5f416b97f92939a4166d41203ca7fbe63cdab154c0227420b368fcaea3d',1,'color.h']]],
+  ['blink_6',['blink',['../color_8h.html#a535b59b8edc8902bb3c4f254625f91baa40652ee9ae143f1c1c830f01a5449ecb',1,'color.h']]],
+  ['block_7',['block',['../namespacespdlog.html#a42e109759a11c9514d3f6313a7709852a14511f2f5564650d129ca7cabc333278',1,'spdlog']]],
+  ['blue_8',['blue',['../color_8h.html#a80d1dc5f416b97f92939a4166d41203ca48d6215903dff56238e52e8891380c8f',1,'blue():&#160;color.h'],['../color_8h.html#a76f7aa9aae46c2ea7333dae7b531d6aca48d6215903dff56238e52e8891380c8f',1,'blue():&#160;color.h']]],
+  ['blue_5fviolet_9',['blue_violet',['../color_8h.html#a80d1dc5f416b97f92939a4166d41203ca25d876582c42c77bd9fe6c152f88a752',1,'color.h']]],
+  ['bold_10',['bold',['../color_8h.html#a535b59b8edc8902bb3c4f254625f91baa69dcab4a73aeec2113f69b61e6263da8',1,'color.h']]],
+  ['bool_5ftype_11',['bool_type',['../core_8h.html#a7aead736a07eaf25623ad7bfa1f0ee2da5c3e61d27b2bdaf4ddb98aadc356e863',1,'core.h']]],
+  ['bright_5fblack_12',['bright_black',['../color_8h.html#a76f7aa9aae46c2ea7333dae7b531d6aca74474ae20bf3ef3bce6fd679194ce383',1,'color.h']]],
+  ['bright_5fblue_13',['bright_blue',['../color_8h.html#a76f7aa9aae46c2ea7333dae7b531d6acac5b47880b4b2ec37179078d63a85def3',1,'color.h']]],
+  ['bright_5fcyan_14',['bright_cyan',['../color_8h.html#a76f7aa9aae46c2ea7333dae7b531d6acacc69f9955c2bf916bb9a83f38141432f',1,'color.h']]],
+  ['bright_5fgreen_15',['bright_green',['../color_8h.html#a76f7aa9aae46c2ea7333dae7b531d6acabd5b4652dffd84bab66529361d0c4974',1,'color.h']]],
+  ['bright_5fmagenta_16',['bright_magenta',['../color_8h.html#a76f7aa9aae46c2ea7333dae7b531d6aca37553b57ad1d7f61b0c51f5a535f72bf',1,'color.h']]],
+  ['bright_5fred_17',['bright_red',['../color_8h.html#a76f7aa9aae46c2ea7333dae7b531d6aca8b84c6e788e91a3a45b9dabedb160590',1,'color.h']]],
+  ['bright_5fwhite_18',['bright_white',['../color_8h.html#a76f7aa9aae46c2ea7333dae7b531d6acada7527acf78cb4e7b582e8163a1f642a',1,'color.h']]],
+  ['bright_5fyellow_19',['bright_yellow',['../color_8h.html#a76f7aa9aae46c2ea7333dae7b531d6aca75dd76d162b9554ec8b63736bc22d93e',1,'color.h']]],
+  ['brown_20',['brown',['../color_8h.html#a80d1dc5f416b97f92939a4166d41203ca6ff47afa5dc7daa42cc705a03fca8a9b',1,'color.h']]],
+  ['burly_5fwood_21',['burly_wood',['../color_8h.html#a80d1dc5f416b97f92939a4166d41203cad238c6c8a44f8e1933911fe10de064f7',1,'color.h']]]
+];

@@ -1,0 +1,6 @@
+<map id="spdlog::sinks::udp_sink&lt; Mutex &gt;" name="spdlog::sinks::udp_sink&lt; Mutex &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="137,185,276,227"/>
+<area shape="rect" id="node2" href="$classspdlog_1_1sinks_1_1base__sink.html" title=" " alt="" coords="5,81,152,123"/>
+<area shape="rect" id="node3" href="$classspdlog_1_1sinks_1_1sink.html" title=" " alt="" coords="7,5,150,32"/>
+<area shape="rect" id="node4" href="$classspdlog_1_1details_1_1udp__client.html" title=" " alt="" coords="176,81,325,123"/>
+</map>

@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['saddle_5fbrown_0',['saddle_brown',['../color_8h.html#a80d1dc5f416b97f92939a4166d41203ca0b1ae0e5580eaa0e6968ec6c8143ecac',1,'color.h']]],
+  ['salmon_1',['salmon',['../color_8h.html#a80d1dc5f416b97f92939a4166d41203ca180fd182f9a0742f483619781ccc36c4',1,'color.h']]],
+  ['sandy_5fbrown_2',['sandy_brown',['../color_8h.html#a80d1dc5f416b97f92939a4166d41203ca9a19a83d0097df35f7ba7af753f0537d',1,'color.h']]],
+  ['sea_5fgreen_3',['sea_green',['../color_8h.html#a80d1dc5f416b97f92939a4166d41203ca2e1e305a440fcfc9109858a7b2e20ca7',1,'color.h']]],
+  ['sea_5fshell_4',['sea_shell',['../color_8h.html#a80d1dc5f416b97f92939a4166d41203caefe66dd5675ff42810bbc04512d44c4b',1,'color.h']]],
+  ['sequence_5',['sequence',['../bundled_2ranges_8h.html#a080be1238e6ee3bd4b9f193b4181cf4dafa1c731ead93e333a9180e16f968c01e',1,'ranges.h']]],
+  ['set_6',['set',['../bundled_2ranges_8h.html#a080be1238e6ee3bd4b9f193b4181cf4dacdaeeeba9b4a4c5ebf042c0215a7bb0e',1,'ranges.h']]],
+  ['sienna_7',['sienna',['../color_8h.html#a80d1dc5f416b97f92939a4166d41203ca91c001e5547439063fefe550d83533b6',1,'color.h']]],
+  ['silver_8',['silver',['../color_8h.html#a80d1dc5f416b97f92939a4166d41203ca97f014516561ef487ec368d6158eb3f4',1,'color.h']]],
+  ['sky_5fblue_9',['sky_blue',['../color_8h.html#a80d1dc5f416b97f92939a4166d41203cad06424e64af2d470476a234e12a48a40',1,'color.h']]],
+  ['slate_5fblue_10',['slate_blue',['../color_8h.html#a80d1dc5f416b97f92939a4166d41203ca8f72f2a45cee9a5f2e0afe5d2bb9d4b1',1,'color.h']]],
+  ['slate_5fgray_11',['slate_gray',['../color_8h.html#a80d1dc5f416b97f92939a4166d41203caf664bac577c1c520c4a98e63457d2f22',1,'color.h']]],
+  ['snow_12',['snow',['../color_8h.html#a80d1dc5f416b97f92939a4166d41203ca2b93fbdf27d43547bec8794054c28e00',1,'color.h']]],
+  ['spring_5fgreen_13',['spring_green',['../color_8h.html#a80d1dc5f416b97f92939a4166d41203ca67485a137fce2085007d93aa115cd093',1,'color.h']]],
+  ['standard_14',['standard',['../bundled_2chrono_8h.html#a4ed3bdd2ae5dcb224f0e84141a87179dac00f0c4675b91fb8b918e4079a0b1bac',1,'chrono.h']]],
+  ['steel_5fblue_15',['steel_blue',['../color_8h.html#a80d1dc5f416b97f92939a4166d41203ca00885bc107cec87940dfe4beadbab382',1,'color.h']]],
+  ['strikethrough_16',['strikethrough',['../color_8h.html#a535b59b8edc8902bb3c4f254625f91baaae9a363b2dfa9181da7ffde8e37813b5',1,'color.h']]],
+  ['string_17',['string',['../core_8h.html#adfa139c9a1902753b3696794759b2c48ab45cffe084dd3d20d928bee85e7b0f21',1,'string():&#160;core.h'],['../bundled_2ranges_8h.html#a080be1238e6ee3bd4b9f193b4181cf4dab45cffe084dd3d20d928bee85e7b0f21',1,'string():&#160;ranges.h']]],
+  ['string_5ftype_18',['string_type',['../core_8h.html#a7aead736a07eaf25623ad7bfa1f0ee2da4771e2c3115bb1af6ce17d9d35a0eb48',1,'core.h']]]
+];

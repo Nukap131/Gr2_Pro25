@@ -1,0 +1,9 @@
+# Logs
+logs/
+*.log
+# build artefakter
+mqtt_json/mqtt_json_sub
+mqtt_json/mqtt_json_pub
+*.o
+build/
+.pio/
