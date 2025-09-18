@@ -18,3 +18,6 @@
 - Kun `adm`-gruppen har læseadgang til logs  
 - Ingen credentials eller følsomme data logges  
 
+## Eksempel-logs
+Se eksempellogs i [`docs/logs/`](docs/logs/) for at se, hvordan Mosquitto og spdlog kan se ud i praksis.  
+De rigtige runtime-logs (journald, auditd, mosquitto, spdlog, nginx) håndteres på systemet.
