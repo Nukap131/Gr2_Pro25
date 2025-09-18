@@ -1,0 +1,7 @@
+<map id="spdlog::sinks::tcp_sink&lt; Mutex &gt;" name="spdlog::sinks::tcp_sink&lt; Mutex &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="443,71,577,112"/>
+<area shape="rect" id="node2" href="$classspdlog_1_1sinks_1_1base__sink.html" title=" " alt="" coords="197,5,344,47"/>
+<area shape="rect" id="node3" href="$classspdlog_1_1sinks_1_1sink.html" title=" " alt="" coords="5,13,148,39"/>
+<area shape="rect" id="node4" href="$structspdlog_1_1sinks_1_1tcp__sink__config.html" title=" " alt="" coords="203,71,338,112"/>
+<area shape="rect" id="node5" href="$classspdlog_1_1details_1_1tcp__client.html" title=" " alt="" coords="198,136,343,177"/>
+</map>

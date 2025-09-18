@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['d_5fformatter_0',['D_formatter',['../classspdlog_1_1details_1_1D__formatter.html',1,'spdlog::details']]],
+  ['d_5fformatter_1',['d_formatter',['../classspdlog_1_1details_1_1d__formatter.html',1,'spdlog::details']]],
+  ['daily_5ffile_5fsink_2',['daily_file_sink',['../classspdlog_1_1sinks_1_1daily__file__sink.html',1,'spdlog::sinks']]],
+  ['daily_5ffilename_5fcalculator_3',['daily_filename_calculator',['../structspdlog_1_1sinks_1_1daily__filename__calculator.html',1,'spdlog::sinks']]],
+  ['daily_5ffilename_5fformat_5fcalculator_4',['daily_filename_format_calculator',['../structspdlog_1_1sinks_1_1daily__filename__format__calculator.html',1,'spdlog::sinks']]],
+  ['data_5',['data',['../structdata.html',1,'']]],
+  ['decimal_5ffp_6',['decimal_fp',['../structdragonbox_1_1decimal__fp.html',1,'dragonbox']]],
+  ['default_5farg_5fformatter_7',['default_arg_formatter',['../structdefault__arg__formatter.html',1,'']]],
+  ['digit_5fgrouping_8',['digit_grouping',['../classdigit__grouping.html',1,'']]],
+  ['disjunction_9',['disjunction',['../structdisjunction.html',1,'']]],
+  ['disjunction_3c_20is_5fformattable_3c_20uncvref_5ftype_3c_20maybe_5fconst_5frange_3c_20r_20_3e_20_3e_2c_20char_20_3e_2c_20has_5ffallback_5fformatter_3c_20uncvref_5ftype_3c_20maybe_5fconst_5frange_3c_20r_20_3e_20_3e_2c_20char_20_3e_20_3e_10',['disjunction&lt; is_formattable&lt; uncvref_type&lt; maybe_const_range&lt; R &gt; &gt;, Char &gt;, has_fallback_formatter&lt; uncvref_type&lt; maybe_const_range&lt; R &gt; &gt;, Char &gt; &gt;',['../structdisjunction.html',1,'']]],
+  ['disjunction_3c_20p_20_3e_11',['disjunction&lt; P &gt;',['../structdisjunction_3_01P_01_4.html',1,'']]],
+  ['disjunction_3c_20p1_2c_20pn_2e_2e_2e_20_3e_12',['disjunction&lt; P1, Pn... &gt;',['../structdisjunction_3_01P1_00_01Pn_8_8_8_01_4.html',1,'']]],
+  ['dist_5fsink_13',['dist_sink',['../classspdlog_1_1sinks_1_1dist__sink.html',1,'spdlog::sinks']]],
+  ['dump_5finfo_14',['dump_info',['../classspdlog_1_1details_1_1dump__info.html',1,'spdlog::details']]],
+  ['dup_5ffilter_5fsink_15',['dup_filter_sink',['../classspdlog_1_1sinks_1_1dup__filter__sink.html',1,'spdlog::sinks']]],
+  ['dynamic_5farg_5flist_16',['dynamic_arg_list',['../classdetail_1_1dynamic__arg__list.html',1,'detail']]],
+  ['dynamic_5fformat_5farg_5fstore_17',['dynamic_format_arg_store',['../classdynamic__format__arg__store.html',1,'']]],
+  ['dynamic_5fformat_5fspecs_18',['dynamic_format_specs',['../structdynamic__format__specs.html',1,'']]],
+  ['dynamic_5fformat_5fspecs_3c_20char_5ftype_20_3e_19',['dynamic_format_specs&lt; char_type &gt;',['../structdynamic__format__specs.html',1,'']]],
+  ['dynamic_5fformatter_20',['dynamic_formatter',['../classdynamic__formatter.html',1,'']]],
+  ['dynamic_5fspecs_5fhandler_21',['dynamic_specs_handler',['../classdynamic__specs__handler.html',1,'']]]
+];

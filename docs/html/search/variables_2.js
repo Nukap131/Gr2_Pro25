@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['char_5fvalue_0',['char_value',['../classvalue.html#a9df030184b1e21eec81f21114332b942',1,'value']]],
+  ['clear_5fline_1',['clear_line',['../classspdlog_1_1sinks_1_1ansicolor__sink.html#a8c8252dbefbc7d0429a28cbaaae79279',1,'spdlog::sinks::ansicolor_sink']]],
+  ['client_5f_2',['client_',['../classspdlog_1_1sinks_1_1tcp__sink.html#afc5b3878cddfb53c78004096725c9346',1,'spdlog::sinks::tcp_sink::client_()'],['../classspdlog_1_1sinks_1_1udp__sink.html#a37c760ffd972e25a71ed1261f1c30b5b',1,'spdlog::sinks::udp_sink::client_()']]],
+  ['color_5frange_5fend_3',['color_range_end',['../structspdlog_1_1details_1_1log__msg.html#a0dfc2763f8e6b73ca34e4cb7c5a9950a',1,'spdlog::details::log_msg::color_range_end()'],['../structspdlog_1_1sinks_1_1qt__color__sink_1_1invoke__params.html#a131247ae2c15aec36709f00b10b9e3a2',1,'spdlog::sinks::qt_color_sink::invoke_params::color_range_end()']]],
+  ['color_5frange_5fstart_4',['color_range_start',['../structspdlog_1_1details_1_1log__msg.html#a87cb1c5f1ecd7415412722123e35d491',1,'spdlog::details::log_msg::color_range_start()'],['../structspdlog_1_1sinks_1_1qt__color__sink_1_1invoke__params.html#acde0fee1784cfea991689a69abfa7a6e',1,'spdlog::sinks::qt_color_sink::invoke_params::color_range_start()']]],
+  ['colors_5f_5',['colors_',['../classspdlog_1_1sinks_1_1qt__color__sink.html#adc74f4090aafec411feae70e0de2da8c',1,'spdlog::sinks::qt_color_sink::colors_()'],['../classspdlog_1_1sinks_1_1wincolor__sink.html#a1820334cd1c99839f909a7bb607ba380',1,'spdlog::sinks::wincolor_sink::colors_()']]],
+  ['concealed_6',['concealed',['../classspdlog_1_1sinks_1_1ansicolor__sink.html#a49ad66f7ed4a65b3caae3e8281af62ee',1,'spdlog::sinks::ansicolor_sink']]],
+  ['config_5f_7',['config_',['../classspdlog_1_1sinks_1_1tcp__sink.html#ab0fb88fa9f04241f3d423b62800e0de8',1,'spdlog::sinks::tcp_sink']]],
+  ['config_5fh_8',['config_h',['../namespaceextract__version.html#ad512f1cbf156fc9a4f995cf5305c8e38',1,'extract_version']]],
+  ['context_9',['context',['../structchrono__formatter.html#ab84529f993ec8e7b7c0113713b24816e',1,'chrono_formatter']]],
+  ['count_5f_10',['count_',['../classdetail_1_1truncating__iterator__base.html#a1d416994cfe027e1eabf459648542695',1,'detail::truncating_iterator_base']]],
+  ['cp_11',['cp',['../structfind__escape__result.html#ab1806aa2af78311d72c996ec6948e122',1,'find_escape_result']]],
+  ['ctx_12',['ctx',['../structcustom__formatter.html#aafc42ddcaf7c8e9df197a91f4e485f63',1,'custom_formatter']]],
+  ['custom_13',['custom',['../classvalue.html#add4c1b492606462aa1168d79129bd603',1,'value']]],
+  ['custom_5ferr_5fhandler_5f_14',['custom_err_handler_',['../classspdlog_1_1logger.html#a30967665909689412dfdfc856fd6a291',1,'spdlog::logger']]],
+  ['cyan_15',['cyan',['../classspdlog_1_1sinks_1_1ansicolor__sink.html#a6cd4420d27c91789350ef079baf14809',1,'spdlog::sinks::ansicolor_sink']]]
+];

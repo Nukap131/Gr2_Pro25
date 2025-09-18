@@ -1,0 +1,34 @@
+<map id="external/spdlog/include/spdlog/sinks/rotating_file_sink.h" name="external/spdlog/include/spdlog/sinks/rotating_file_sink.h">
+<area shape="rect" id="node1" title=" " alt="" coords="1934,5,2109,61"/>
+<area shape="rect" id="node2" href="$bench_8cpp.html" title=" " alt="" coords="1446,117,1613,158"/>
+<area shape="rect" id="node3" href="$latency_8cpp.html" title=" " alt="" coords="1637,117,1803,158"/>
+<area shape="rect" id="node4" href="$example_8cpp.html" title=" " alt="" coords="1828,117,2012,158"/>
+<area shape="rect" id="node5" href="$rotating__file__sink-inl_8h.html" title=" " alt="" coords="2037,109,2211,165"/>
+<area shape="rect" id="node7" href="$includes_8h.html" title=" " alt="" coords="2235,117,2394,158"/>
+<area shape="rect" id="node31" href="$logging_8hpp.html" title=" " alt="" coords="3433,124,3583,151"/>
+<area shape="rect" id="node6" href="$file__sinks_8cpp.html" title=" " alt="" coords="5,213,152,255"/>
+<area shape="rect" id="node8" href="$test__async_8cpp.html" title=" " alt="" coords="177,213,335,255"/>
+<area shape="rect" id="node9" href="$test__backtrace_8cpp.html" title=" " alt="" coords="359,213,518,255"/>
+<area shape="rect" id="node10" href="$test__bin__to__hex_8cpp.html" title=" " alt="" coords="542,213,701,255"/>
+<area shape="rect" id="node11" href="$test__cfg_8cpp.html" title=" " alt="" coords="725,213,883,255"/>
+<area shape="rect" id="node12" href="$test__circular__q_8cpp.html" title=" " alt="" coords="907,213,1066,255"/>
+<area shape="rect" id="node13" href="$test__create__dir_8cpp.html" title=" " alt="" coords="1090,213,1249,255"/>
+<area shape="rect" id="node14" href="$test__custom__callbacks_8cpp.html" title=" " alt="" coords="1273,213,1474,255"/>
+<area shape="rect" id="node15" href="$test__daily__logger_8cpp.html" title=" " alt="" coords="1498,213,1662,255"/>
+<area shape="rect" id="node16" href="$test__dup__filter_8cpp.html" title=" " alt="" coords="1686,213,1845,255"/>
+<area shape="rect" id="node17" href="$test__errors_8cpp.html" title=" " alt="" coords="1869,213,2027,255"/>
+<area shape="rect" id="node18" href="$test__file__helper_8cpp.html" title=" " alt="" coords="2051,213,2210,255"/>
+<area shape="rect" id="node19" href="$test__file__logging_8cpp.html" title=" " alt="" coords="2235,213,2395,255"/>
+<area shape="rect" id="node20" href="$test__fmt__helper_8cpp.html" title=" " alt="" coords="2419,213,2578,255"/>
+<area shape="rect" id="node21" href="$test__macros_8cpp.html" title=" " alt="" coords="2602,213,2761,255"/>
+<area shape="rect" id="node22" href="$test__misc_8cpp.html" title=" " alt="" coords="2785,213,2943,255"/>
+<area shape="rect" id="node23" href="$test__mpmc__q_8cpp.html" title=" " alt="" coords="2967,213,3126,255"/>
+<area shape="rect" id="node24" href="$test__pattern__formatter_8cpp.html" title=" " alt="" coords="3151,213,3351,255"/>
+<area shape="rect" id="node25" href="$test__registry_8cpp.html" title=" " alt="" coords="3375,213,3534,255"/>
+<area shape="rect" id="node26" href="$test__stdout__api_8cpp.html" title=" " alt="" coords="3558,213,3717,255"/>
+<area shape="rect" id="node27" href="$test__stopwatch_8cpp.html" title=" " alt="" coords="3741,213,3899,255"/>
+<area shape="rect" id="node28" href="$test__systemd_8cpp.html" title=" " alt="" coords="3923,213,4082,255"/>
+<area shape="rect" id="node29" href="$test__time__point_8cpp.html" title=" " alt="" coords="4106,213,4265,255"/>
+<area shape="rect" id="node30" href="$utils_8cpp.html" title=" " alt="" coords="4289,213,4447,255"/>
+<area shape="rect" id="node32" href="$src_2main_8cpp.html" title=" " alt="" coords="4471,221,4577,247"/>
+</map>
