@@ -7,3 +7,5 @@ mqtt_json/mqtt_json_pub
 *.o
 build/
 .pio/
+# Tillad eksempel-logs i dokumentation
+!docs/logs/*.log
