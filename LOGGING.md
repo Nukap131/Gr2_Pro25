@@ -2,7 +2,8 @@
 
 ## Omfang
 - **System**: journald (persistent), auth.log, kernel events  
-- **Database**: auditd overvågning af `/root/tempprojekt/sensordata.db`  
+- **Database**: auditd overvågning af SQLite databasen (fx `sensordata.db`)  
+  
 - **MQTT**: Mosquitto logs (error, warning, notice, information)  
 - **Applikation**: spdlog i paho-sub.cpp (rotating file + JSON)  
 - **Webserver**: nginx access/error logs  
