@@ -1,5 +1,20 @@
+/**
+ * @file questdb_test.cpp
+ * @brief Eksempel: send en række til QuestDB via C++ client (ILP/HTTP).
+ * @details Forbinder til QuestDB containeren på 127.0.0.1:9100 og indsætter
+ * en test-række i tabellen `trades` med symbol, side, pris og amount.
+ * Bygning: cmake .. && make (se CMakeLists.txt i samme mappe).
+ */
+
+
+
 #include <questdb/ingress/line_sender.hpp>
 #include <iostream>
+
+/**
+ * @brief Program entrypoint der sender en enkelt række til `trades`.
+ * @return 0 ved succes (kaster exceptions ved fejl).
+ */
 
 int main() {
     try {
