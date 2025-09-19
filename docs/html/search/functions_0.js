@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_5fthread_5fid_0',['_thread_id',['../namespacespdlog_1_1details_1_1os.html#a782b447469972ff6c179a150532161c8',1,'spdlog::details::os']]]
+  ['init_5flogging_0',['init_logging',['../logging_8hpp.html#ad8bf2ebe714bdb6a1e216ed7d9efa7a3',1,'logging.hpp']]]
 ];
