@@ -10,7 +10,7 @@ API’et kører over **HTTPS** (self-signed certifikat til demo).
 Klon projektet og start med Docker Compose:
 
 ```bash
-git clone https://github.com/Vissing96/fastapi-questdb.git
+git clone https://github.com/Nukap131/Gr2_Pro25.git
 cd fastapi-questdb
 docker compose up -d --build
 ```
