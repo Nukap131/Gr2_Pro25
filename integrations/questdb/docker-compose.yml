@@ -1,36 +1,23 @@
-version: "3.9"
-
 services:
   questdb:
     image: questdb/questdb:latest
     container_name: questdb
-    restart: unless-stopped
     ports:
-      - "9000:9000"   # Web Console
-      - "8812:8812"   # Postgres wire protocol
+      - "9000:9000"
+      - "8812:8812"
+      - "9009:9009"
     volumes:
       - questdb_data:/var/lib/questdb
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:9000/"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
 
   fastapi-api:
     build: .
     container_name: fastapi-api
     depends_on:
-      questdb:
-        condition: service_healthy
+      - questdb
     ports:
       - "8080:8000"
     environment:
       - DATABASE_URL=postgresql://admin:quest@questdb:8812/qdb
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/ping"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
 
 volumes:
   questdb_data:

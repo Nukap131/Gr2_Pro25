@@ -61,3 +61,24 @@ curl -k "https://localhost:8000/api/v1/sensor?limit=5"
 Efter opstart kan du teste API’et direkte med curl-kommandoerne ovenfor eller åbne Swagger UI på:  
 👉 https://localhost:8000/docs
 
+---
+
+## QuestDB + FastAPI Integration
+
+### Opsætning
+- Docker Compose med:
+  - QuestDB (port 9000, 8812, 9009)
+  - FastAPI (port 8080)
+- Persistente data via Docker volumes
+
+### Test scripts
+- `test_fastapi.sh` → tester `/ping` og `/api/v1/healthz`
+- `test_insert.sh` → indsætter testdata i QuestDB
+- `test_persistence.sh` → stopper og starter containerne, tjekker om data stadig er der
+
+### Kørsel
+```bash
+docker compose up -d --build
+./test_insert.sh
+./test_fastapi.sh localhost
+./test_persistence.sh
