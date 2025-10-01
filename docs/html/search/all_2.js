@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp'],['../questdb__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;questdb_test.cpp']]],
-  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]]
+  ['dim_0',['DIM',['../mqtt__json__sub_8cpp.html#ac25189db92959bff3c6c2adf4c34b50a',1,'mqtt_json_sub.cpp']]]
 ];

@@ -25,11 +25,31 @@
 var NAVTREE =
 [
   [ "Gr2_Pro25", "index.html", [
+    [ "Gr2_Pro25 Documentation 🚀", "index.html", null ],
+    [ "c-questdb-client", "md_integrations_questdb_README.html", [
+      [ "Insertion Protocols Overview", "md_integrations_questdb_README.html#autotoc_md1", null ],
+      [ "Protocol Versions", "md_integrations_questdb_README.html#autotoc_md2", null ],
+      [ "Getting Started", "md_integrations_questdb_README.html#autotoc_md3", null ],
+      [ "Further Topics", "md_integrations_questdb_README.html#autotoc_md4", null ],
+      [ "Community", "md_integrations_questdb_README.html#autotoc_md5", null ],
+      [ "License", "md_integrations_questdb_README.html#autotoc_md6", null ]
+    ] ],
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ]
+      ] ]
+    ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ]
+        [ "Functions", "globals_func.html", null ],
+        [ "Typedefs", "globals_type.html", null ],
+        [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]
@@ -37,7 +57,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"dir_68267d1309a1af8e8297ef4c3efbcdba.html"
+"annotated.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

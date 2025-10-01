@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp'],['../questdb__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;questdb_test.cpp']]]
+  ['log_5ferror_0',['log_error',['../logging_8hpp.html#ac0da20da5701af0f1ebd1e151f421c6e',1,'logging.hpp']]],
+  ['log_5finfo_1',['log_info',['../logging_8hpp.html#aa3319a6ef549951728ffd4b89bf37fdf',1,'logging.hpp']]],
+  ['log_5fwarn_2',['log_warn',['../logging_8hpp.html#ac10b7d5535a7a685844149efe783dacd',1,'logging.hpp']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rotating_5flog_0',['ROTATING_LOG',['../test__file__logging_8cpp.html#ab78d51751b245db7c42444e52ea56ca6',1,'test_file_logging.cpp']]]
+  ['magenta_0',['MAGENTA',['../mqtt__json__sub_8cpp.html#a6f699060902f800f12aaae150f3a708e',1,'mqtt_json_sub.cpp']]]
 ];

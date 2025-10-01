@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['spdlog_0',['spdlog',['../md_external_spdlog_README.html',1,'']]]
+  ['gr2_5fpro25_20documentation_20🚀_0',['Gr2_Pro25 Documentation 🚀',['../index.html',1,'']]]
 ];

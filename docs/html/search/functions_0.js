@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['init_5flogging_0',['init_logging',['../logging_8hpp.html#ad8bf2ebe714bdb6a1e216ed7d9efa7a3',1,'logging.hpp']]]
+  ['colorize_5fjson_0',['colorize_json',['../mqtt__json__sub_8cpp.html#a66ba5bff1a2a46316390d0500662b3bc',1,'mqtt_json_sub.cpp']]]
 ];

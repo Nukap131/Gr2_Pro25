@@ -1,47 +1,36 @@
 /**
  * @file questdb_test.cpp
- * @brief Eksempel: send en række til QuestDB via C++ client (ILP/HTTP).
- * @details Forbinder til QuestDB containeren på 127.0.0.1:9100 og indsætter
- * en test-række i tabellen `trades` med symbol, side, pris og amount.
- * Bygning: cmake .. && make (se CMakeLists.txt i samme mappe).
+ * @brief Testklient til QuestDB i C++.
+ *
+ * Dette eksempel demonstrerer integration mellem C++ og QuestDB.
+ * Programmet indsætter en række data i tabellen `sensor_data`.
  */
-
-
 
 #include <questdb/ingress/line_sender.hpp>
 #include <iostream>
+#include <stdexcept>
 
 /**
- * @brief Program entrypoint der sender en enkelt række til `trades`.
- * @return 0 ved succes (kaster exceptions ved fejl).
+ * @brief Entry point der indsætter en række i QuestDB.
+ *
+ * Denne funktion opretter en forbindelse til QuestDB (127.0.0.1:9009)
+ * og indsætter en række med device, value og timestamp.
+ *
+ * @return 0 ved succes, 1 ved fejl.
  */
-
 int main() {
     try {
-        questdb::ingress::line_sender sender =
-            questdb::ingress::line_sender::from_conf("http::addr=127.0.0.1:9100;");
+        questdb::ingress::line_sender sender{"127.0.0.1", 9009};
+        sender.table("sensor_data")
+              .column("device", "esp32")
+              .column("value", 42.5)
+              .at_now();
+        sender.flush();
 
-        questdb::ingress::line_sender_buffer buffer(
-            questdb::ingress::protocol_version::v2,
-            1024,
-            8192
-        );
-
-        buffer
-            .table("trades")
-            .symbol("symbol", "BTC-USD")
-            .symbol("side", "buy")
-            .column("price", 27123.45)
-            .column("amount", 0.5)
-            .at(questdb::ingress::timestamp_nanos::now());
-
-        sender.flush(buffer);
-        sender.close();
-
-        std::cout << "✅ Data sendt til QuestDB (questdb2)" << std::endl;
-    } catch (const std::exception &ex) {
-        std::cerr << "Fejl: " << ex.what() << std::endl;
+        std::cout << "✅ Række indsat i QuestDB!" << std::endl;
+    } catch (const std::exception &e) {
+        std::cerr << "❌ Fejl: " << e.what() << std::endl;
+        return 1;
     }
+    return 0;
 }
-
-
