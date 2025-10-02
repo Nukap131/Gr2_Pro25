@@ -24,6 +24,20 @@ Når containere kører, har du adgang til:
 - **FastAPI (Swagger UI)** → https://localhost:8000/docs  
 - **QuestDB Console** → http://localhost:9000  
 
+## Healthchecks
+
+Dette projekt benytter nu Docker healthchecks:
+
+- **QuestDB** → Tjekker med `curl` om webkonsollen på port **9000** svarer.  
+- **FastAPI** → Tjekker med `curl` om endpointet **/ping** svarer korrekt.  
+
+Healthchecks gør, at Docker automatisk kan afgøre om services kører som forventet.  
+Du kan se status med:
+
+```bash
+docker ps
+
+
 ---
 
 ## Endpoints
