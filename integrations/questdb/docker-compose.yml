@@ -4,22 +4,37 @@ services:
     container_name: questdb
     restart: always
     ports:
-      - "9000:9000"
-      - "8812:8812"
-      - "9009:9009"
+      - "9000:9000"    # Web Console
+      - "8812:8812"    # Postgres wire protocol
+      - "9009:9009"    # InfluxDB line protocol
     volumes:
       - questdb_data:/var/lib/questdb
+    # Healthcheck uden curl/nc: tjek om TCP-port 9000 (0x2328) lytter
+    healthcheck:
+      test: ["CMD-SHELL", "grep -q ':2328' /proc/net/tcp || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 6
+      start_period: 15s
 
   fastapi-api:
     build: .
     container_name: fastapi-api
     restart: always
     depends_on:
-      - questdb
+      questdb:
+        condition: service_healthy
     ports:
       - "8080:8000"
     environment:
       - DATABASE_URL=postgresql://admin:quest@questdb:8812/qdb
+    # Healthcheck uden curl/nc: tjek om TCP-port 8000 (0x1F40) lytter
+    healthcheck:
+      test: ["CMD-SHELL", "grep -q ':1F40' /proc/net/tcp || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 6
+      start_period: 10s
 
 volumes:
   questdb_data:
