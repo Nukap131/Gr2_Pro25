@@ -2,6 +2,7 @@ services:
   questdb:
     image: questdb/questdb:latest
     container_name: questdb
+    restart: always
     ports:
       - "9000:9000"
       - "8812:8812"
@@ -12,6 +13,7 @@ services:
   fastapi-api:
     build: .
     container_name: fastapi-api
+    restart: always
     depends_on:
       - questdb
     ports:
