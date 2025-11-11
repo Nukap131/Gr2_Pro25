@@ -1,0 +1,51 @@
+version: "3.9"
+
+services:
+  # ==========================================
+  # QUESTDB DATABASE
+  # ==========================================
+  questdb:
+    image: questdb/questdb:latest
+    container_name: questdb
+    restart: always
+    ports:
+      - "9000:9000"   # Web Console
+      - "8812:8812"   # Postgres wire protocol
+      - "9009:9009"   # InfluxDB line protocol
+    volumes:
+      - questdb_data:/var/lib/questdb
+    healthcheck:
+      test: ["CMD-SHELL", "grep -q ':2328' /proc/net/tcp || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 6
+      start_period: 15s
+
+  # ==========================================
+  # FASTAPI BACKEND
+  # ==========================================
+  fastapi-api:
+    build: .
+    container_name: fastapi-api
+    restart: always
+    depends_on:
+      questdb:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://admin:quest@questdb:8812/qdb
+      - MQTT_BROKER=localhost
+      - MQTT_PORT=1883
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fs http://localhost:8000/docs || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 10s
+
+# ==========================================
+#  PERSISTENTE DATA-VOLUMES
+# ==========================================
+volumes:
+  questdb_data:
