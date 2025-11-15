@@ -9,9 +9,9 @@ services:
     container_name: questdb
     restart: always
     ports:
-      - "9000:9000"   # Web Console
-      - "8812:8812"   # Postgres wire protocol
-      - "9009:9009"   # InfluxDB line protocol
+      - "9000:9000"
+      - "8812:8812"
+      - "9009:9009"
     volumes:
       - questdb_data:/var/lib/questdb
     healthcheck:
@@ -37,12 +37,14 @@ services:
       - DATABASE_URL=postgresql://admin:quest@questdb:8812/qdb
       - MQTT_BROKER=localhost
       - MQTT_PORT=1883
+    volumes:
+      - ./sensordata.db:/app/sensordata.db
     healthcheck:
-      test: ["CMD-SHELL", "curl -fs http://localhost:8000/docs || exit 1"]
-      interval: 10s
-      timeout: 5s
-      retries: 6
-      start_period: 10s
+      test: ["CMD-SHELL", "curl -fs http://localhost:8000/health || exit 1"]
+      interval: 20s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
 
 # ==========================================
 #  PERSISTENTE DATA-VOLUMES

@@ -3,56 +3,53 @@ import pandas as pd
 import sqlite3
 from streamlit_autorefresh import st_autorefresh
 
-# --- Basisindstillinger ---
 DB_PATH = "/home/victor/tempprojekt/sensordata.db"
+
 st.set_page_config(page_title="Ventilationsdata Dashboard", layout="wide")
-st.title("🌬️ Dokumentation af Temperatur- og Luftkvalitetsdata")
+st.title("🌬️ Ventilationsdata – Temperatur og Fugt")
 
-# --- Auto-refresh (hver 30 sekunder) ---
+# Auto-refresh
 st.sidebar.write("⚙️ Indstillinger")
-autorefresh = st.sidebar.checkbox("Auto-opdater hvert 30. sekund", value=True)
+autorefresh = st.sidebar.checkbox("Auto-opdater hver 30 sek.", value=True)
 if autorefresh:
-    st_autorefresh(interval=30 * 1000, key="datarefresh")
+    st_autorefresh(interval=30 * 1000, key="refresh")
 
-# --- Funktion til at hente data ---
-@st.cache_data(ttl=30)
+@st.cache_data(ttl=5)
 def load_data():
     conn = sqlite3.connect(DB_PATH)
-    df = pd.read_sql_query("SELECT * FROM measurements ORDER BY id DESC LIMIT 200", conn)
+    df = pd.read_sql_query(
+        "SELECT timestamp, temperatur, fugt, device FROM målinger ORDER BY rowid DESC LIMIT 500",
+        conn
+    )
     conn.close()
     return df
 
 data = load_data()
 
 if data.empty:
-    st.warning("Ingen data fundet i databasen endnu.")
+    st.warning("Ingen data i databasen.")
     st.stop()
 
-# --- Filtrering efter device_id ---
-device_ids = ["Alle"] + sorted(data["device_id"].unique().tolist())
-valgt_device = st.selectbox("Vælg enhed", device_ids)
-if valgt_device != "Alle":
-    data = data[data["device_id"] == valgt_device]
-
-# --- Seneste måling ---
 seneste = data.iloc[0]
 st.metric(
-    label=f"Seneste måling ({seneste['device_id']})",
-    value=f"{seneste['value']} °C",
-    help=f"Tidspunkt: {seneste['ts']}"
+    label=f"Seneste Temperatur (device: {seneste['device']})",
+    value=f"{seneste['temperatur']} °C",
+    help=f"Fugt: {seneste['fugt']}%\nTid: {seneste['timestamp']}"
 )
 
-# --- Vis tabel og graf ---
-st.subheader("📈 Målinger")
+st.subheader("📈 Temperatur over tid")
+st.line_chart(data, x="timestamp", y="temperatur")
+
+st.subheader("💧 Fugt over tid")
+st.line_chart(data, x="timestamp", y="fugt")
+
+st.subheader("📋 Rå data")
 st.dataframe(data)
 
-st.line_chart(data, x="ts", y="value")
-
-# --- Eksporter som CSV ---
 csv = data.to_csv(index=False).encode("utf-8")
 st.download_button(
-    label="📥 Download data som CSV",
+    label="📥 Download CSV",
     data=csv,
     file_name="ventilationsdata.csv",
-    mime="text/csv",
+    mime="text/csv"
 )
