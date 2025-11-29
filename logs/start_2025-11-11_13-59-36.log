@@ -1,0 +1,31 @@
+Starttid: tir 11 nov 13:59:36 CET 2025
+Logfil: /home/victor/tempprojekt/logs/start_2025-11-11_13-59-36.log
+---------------------------------------
+[1/6] Aktiverer virtuelt miljø...
+✔ Venv aktiveret på 0 sekunder.
+[2/6] Starter Docker-containere...
+✔ Docker startet på 0 sekunder.
+[3/6] Venter på at containere bliver 'healthy'...
+[4/6] Status for containere:
+NAMES         STATUS                    PORTS
+fastapi-api   Up 38 minutes (healthy)   0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp
+questdb       Up 38 minutes (healthy)   0.0.0.0:8812->8812/tcp, [::]:8812->8812/tcp, 0.0.0.0:9000->9000/tcp, [::]:9000->9000/tcp, 0.0.0.0:9009->9009/tcp, [::]:9009->9009/tcp
+---------------------------------------
+Health check:
+fastapi-api: Up 38 minutes (healthy)
+questdb: Up 38 minutes (healthy)
+[5/6] Starter Streamlit-dashboard...
+✔ Streamlit kører.
+[6/6] Tjekker dokumentation...
+✔ Doxygen dokumentation fundet.
+---------------------------------------
+SYSTEM STARTET PÅ 16 SEKUNDER
+---------------------------------------
+FastAPI   → http://127.0.0.1:8000
+Streamlit → http://127.0.0.1:8501
+QuestDB   → http://127.0.0.1:9000
+---------------------------------------
+✅ Alt OK – systemet kører som forventet.
+=======================================
+  START-PROCES FÆRDIG
+=======================================

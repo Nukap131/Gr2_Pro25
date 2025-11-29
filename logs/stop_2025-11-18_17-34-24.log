@@ -1,0 +1,25 @@
+=======================================
+🛑 STOPPER VENTILATIONSPROJEKT
+=======================================
+[1/5] Stopper subscriber...
+[32m[OK] Subscriber stoppet[0m
+[2/5] Stopper Streamlit...
+[32m[OK] Streamlit stoppet[0m
+[3/5] Stopper Docker...
+time="2025-11-18T17:34:25+01:00" level=warning msg="/home/victor/tempprojekt/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Container fastapi-api  Stopping
+ Container fastapi-api  Stopped
+ Container fastapi-api  Removing
+ Container fastapi-api  Removed
+ Container questdb  Stopping
+ Container questdb  Stopped
+ Container questdb  Removing
+ Container questdb  Removed
+ Network tempprojekt_default  Removing
+ Network tempprojekt_default  Removed
+[32m[OK] Docker stoppet[0m
+[4/5] Stopper Mosquitto...
+[32m[OK] Mosquitto stoppet[0m
+---------------------------------------
+[32m✅ SYSTEMET ER STOPPET[0m
+---------------------------------------

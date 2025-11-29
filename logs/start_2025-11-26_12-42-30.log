@@ -1,0 +1,61 @@
+Starttid: ons 26 nov 12:42:30 CET 2025
+Logfil: /home/victor/tempprojekt/logs/start_2025-11-26_12-42-30.log
+---------------------------------------
+[32m[OK] venv aktiveret[0m
+[32m[OK] Mosquitto kører[0m
+[==========] Running 5 tests from 4 test suites.
+[----------] Global test environment set-up.
+[----------] 2 tests from MQTTTest
+[ RUN      ] MQTTTest.ConnectToBroker
+[       OK ] MQTTTest.ConnectToBroker (0 ms)
+[ RUN      ] MQTTTest.PublishMessage
+[       OK ] MQTTTest.PublishMessage (0 ms)
+[----------] 2 tests from MQTTTest (0 ms total)
+
+[----------] 1 test from MQTTLoopbackTest
+[ RUN      ] MQTTLoopbackTest.PublishAndReceive
+[       OK ] MQTTLoopbackTest.PublishAndReceive (2332 ms)
+[----------] 1 test from MQTTLoopbackTest (2332 ms total)
+
+[----------] 1 test from DatabaseTest
+[ RUN      ] DatabaseTest.InsertAndRetrieveRecord
+[       OK ] DatabaseTest.InsertAndRetrieveRecord (23 ms)
+[----------] 1 test from DatabaseTest (23 ms total)
+
+[----------] 1 test from SensorTest
+[ RUN      ] SensorTest.ReadsValidRange
+[       OK ] SensorTest.ReadsValidRange (0 ms)
+[----------] 1 test from SensorTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 4 test suites ran. (2356 ms total)
+[  PASSED  ] 5 tests.
+time="2025-11-26T12:42:34+01:00" level=warning msg="/home/victor/tempprojekt/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Network tempprojekt_default  Creating
+ Network tempprojekt_default  Created
+ Volume tempprojekt_questdb_data  Creating
+ Volume tempprojekt_questdb_data  Created
+ Container glances  Creating
+ Container mosquitto  Creating
+ Container questdb  Creating
+ Container glances  Created
+ Container questdb  Created
+ Container fastapi-api  Creating
+ Container mosquitto  Created
+ Container subscriber  Creating
+ Container fastapi-api  Created
+ Container dashboard  Creating
+ Container subscriber  Created
+ Container watchdog  Creating
+ Container dashboard  Created
+ Container watchdog  Created
+ Container questdb  Starting
+ Container glances  Starting
+ Container mosquitto  Starting
+ Container glances  Started
+ Container questdb  Started
+ Container questdb  Waiting
+ Container questdb  Healthy
+ Container fastapi-api  Starting
+ Container fastapi-api  Started
+Error response from daemon: failed to set up container networking: driver failed programming external connectivity on endpoint mosquitto (05e25bb8aa6a5e44ed2b56e83d39c4b04c3bc006fb572729f26059fe80a67857): failed to bind host port 0.0.0.0:1883/tcp: address already in use

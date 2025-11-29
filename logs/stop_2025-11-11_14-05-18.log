@@ -1,0 +1,16 @@
+Logfil: /home/victor/tempprojekt/logs/stop_2025-11-11_14-05-18.log
+Dato: tir 11 nov 14:05:18 CET 2025
+---------------------------------------
+[1/4] Stopper Streamlit...
+✔ Streamlit stoppet.
+[2/4] Gemmer Streamlit-log...
+✔ Streamlit-log gemt.
+[3/4] Stopper Docker-containere...
+✔ Docker stoppet.
+[4/4] Gemmer Docker-log...
+✔ Docker-log gemt.
+---------------------------------------
+Alle tjenester stoppet og logget.
+=======================================
+  SYSTEMET ER NU STANDSET.
+=======================================

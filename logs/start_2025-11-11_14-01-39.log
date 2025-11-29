@@ -1,0 +1,27 @@
+=======================================
+  STARTER VENTILATIONSPROJEKT
+=======================================
+Starttid: tir 11 nov 14:01:39 CET 2025
+Logfil: /home/victor/tempprojekt/logs/start_2025-11-11_14-01-39.log
+---------------------------------------
+[1/6] Aktiverer virtuelt miljø... [0;32m✔ OK[0m
+[2/6] Starter Docker-containere... [0;31m✖ FEJL[0m
+[3/6] Venter på at containere bliver 'healthy'...
+NAMES         STATUS                    PORTS
+fastapi-api   Up 40 minutes (healthy)   0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp
+questdb       Up 40 minutes (healthy)   0.0.0.0:8812->8812/tcp, [::]:8812->8812/tcp, 0.0.0.0:9000->9000/tcp, [::]:9000->9000/tcp, 0.0.0.0:9009->9009/tcp, [::]:9009->9009/tcp
+[4/6] Starter Streamlit-dashboard... [0;32m✔ OK[0m
+[5/6] Tjekker dokumentation... [0;32m✔ Fundet[0m
+---------------------------------------
+SYSTEMSTATUS:
+✅ Virtuelt miljø OK
+❌ Docker start FEJLEDE
+✅ FastAPI-container er HEALTHY
+✅ QuestDB-container er HEALTHY
+✅ Streamlit kører
+---------------------------------------
+System klar på 12 sekunder.
+FastAPI   → http://127.0.0.1:8000
+Streamlit → http://127.0.0.1:8501
+QuestDB   → http://127.0.0.1:9000
+=======================================

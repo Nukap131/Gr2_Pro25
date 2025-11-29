@@ -1,0 +1,54 @@
+Starttid: man 24 nov 13:49:09 CET 2025
+Logfil: /home/victor/tempprojekt/logs/start_2025-11-24_13-49-09.log
+---------------------------------------
+[==========] Running 5 tests from 4 test suites.
+[----------] Global test environment set-up.
+[----------] 2 tests from MQTTTest
+[ RUN      ] MQTTTest.ConnectToBroker
+[       OK ] MQTTTest.ConnectToBroker (0 ms)
+[ RUN      ] MQTTTest.PublishMessage
+[       OK ] MQTTTest.PublishMessage (0 ms)
+[----------] 2 tests from MQTTTest (0 ms total)
+
+[----------] 1 test from MQTTLoopbackTest
+[ RUN      ] MQTTLoopbackTest.PublishAndReceive
+[       OK ] MQTTLoopbackTest.PublishAndReceive (2222 ms)
+[----------] 1 test from MQTTLoopbackTest (2222 ms total)
+
+[----------] 1 test from DatabaseTest
+[ RUN      ] DatabaseTest.InsertAndRetrieveRecord
+[       OK ] DatabaseTest.InsertAndRetrieveRecord (3 ms)
+[----------] 1 test from DatabaseTest (3 ms total)
+
+[----------] 1 test from SensorTest
+[ RUN      ] SensorTest.ReadsValidRange
+[       OK ] SensorTest.ReadsValidRange (0 ms)
+[----------] 1 test from SensorTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 4 test suites ran. (2226 ms total)
+[  PASSED  ] 5 tests.
+time="2025-11-24T13:49:13+01:00" level=warning msg="/home/victor/tempprojekt/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2025-11-24T13:49:13+01:00" level=warning msg="Found orphan containers ([mqtt]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container fastapi-api  Running
+ Container questdb  Starting
+ Container questdb  Started
+ Container questdb  Waiting
+ Container questdb  Healthy
+INFO:     Started server process [26631]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.110.128:8501
+
+/home/victor/tempprojekt/app.py:39: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df["timestamp"] = pd.to_datetime(df["timestamp"])
+INFO:     Shutting down
+  Stopping...
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [26631]

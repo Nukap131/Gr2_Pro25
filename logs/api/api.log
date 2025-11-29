@@ -1,0 +1,9 @@
+2025-11-28 09:48:21,751 [INFO] API container starter ...
+2025-11-28 09:48:21,752 [INFO] Starter MQTT → QuestDB listener ...
+2025-11-28 11:17:38,969 [INFO] /maalinger endpoint kaldt med limit=10
+2025-11-28 11:17:39,135 [INFO] Hentede 10 rækker fra QuestDB
+2025-11-28 11:19:14,888 [INFO] Health endpoint kaldt
+2025-11-28 11:19:44,105 [INFO] /maalinger endpoint kaldt med limit=200
+2025-11-28 11:19:44,234 [INFO] Hentede 192 rækker fra QuestDB
+2025-11-28 11:23:45,729 [INFO] /maalinger endpoint kaldt med limit=500
+2025-11-28 11:23:45,821 [INFO] Hentede 196 rækker fra QuestDB

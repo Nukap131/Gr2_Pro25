@@ -1,0 +1,13 @@
+=======================================
+🛑 STOPPER VENTILATIONSPROJEKT
+=======================================
+[1/4] Stopper subscriber...
+[33m[INFO] Ingen subscriber.pid fundet[0m
+[2/4] Stopper Mosquitto...
+[32m[OK] Mosquitto stoppet[0m
+[3/4] Stopper Docker...
+time="2025-11-15T10:05:04+01:00" level=warning msg="/home/victor/tempprojekt/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+[32m[OK] Docker stoppet[0m
+---------------------------------------
+[32m✅ SYSTEMET ER STOPPET[0m
+---------------------------------------

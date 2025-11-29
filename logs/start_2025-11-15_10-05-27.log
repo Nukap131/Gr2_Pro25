@@ -1,0 +1,38 @@
+Starttid: lør 15 nov 10:05:27 CET 2025
+Logfil: /home/victor/tempprojekt/logs/start_2025-11-15_10-05-27.log
+---------------------------------------
+[32m[OK] Virtuelt miljø aktiveret[0m
+[==========] Running 5 tests from 4 test suites.
+[----------] Global test environment set-up.
+[----------] 2 tests from MQTTTest
+[ RUN      ] MQTTTest.ConnectToBroker
+[       OK ] MQTTTest.ConnectToBroker (0 ms)
+[ RUN      ] MQTTTest.PublishMessage
+[       OK ] MQTTTest.PublishMessage (0 ms)
+[----------] 2 tests from MQTTTest (0 ms total)
+
+[----------] 1 test from MQTTLoopbackTest
+[ RUN      ] MQTTLoopbackTest.PublishAndReceive
+unknown file: Failure
+C++ exception with description "MQTT error [-1]: TCP/TLS connect failure" thrown in the test body.
+[  FAILED  ] MQTTLoopbackTest.PublishAndReceive (208 ms)
+[----------] 1 test from MQTTLoopbackTest (208 ms total)
+
+[----------] 1 test from DatabaseTest
+[ RUN      ] DatabaseTest.InsertAndRetrieveRecord
+[       OK ] DatabaseTest.InsertAndRetrieveRecord (9 ms)
+[----------] 1 test from DatabaseTest (9 ms total)
+
+[----------] 1 test from SensorTest
+[ RUN      ] SensorTest.ReadsValidRange
+[       OK ] SensorTest.ReadsValidRange (0 ms)
+[----------] 1 test from SensorTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 4 test suites ran. (217 ms total)
+[  PASSED  ] 4 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] MQTTLoopbackTest.PublishAndReceive
+
+ 1 FAILED TEST
+[31m[FEJL] Tests fejlede[0m

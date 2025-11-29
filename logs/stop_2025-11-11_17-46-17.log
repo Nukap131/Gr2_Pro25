@@ -1,0 +1,30 @@
+Stoptid: tir 11 nov 17:46:17 CET 2025
+Logfil: /home/victor/tempprojekt/logs/stop_2025-11-11_17-46-17.log
+---------------------------------------
+[32m[OK] Streamlit stoppet[0m
+time="2025-11-11T17:46:19+01:00" level=warning msg="/home/victor/tempprojekt/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Container fastapi-api  Stopping
+ Container fastapi-api  Stopped
+ Container fastapi-api  Removing
+ Container fastapi-api  Removed
+ Container questdb  Stopping
+ Container questdb  Stopped
+ Container questdb  Removing
+ Container questdb  Removed
+ Network tempprojekt_default  Removing
+ Network tempprojekt_default  Removed
+[32m[OK] Docker-containere stoppet[0m
+[33m[INFO] Mosquitto fortsætter (systemd)[0m
+[32m[OK] Virtuelt miljø deaktiveret[0m
+[32m[OK] Gamle logfiler fjernet[0m
+---------------------------------------
+[32m✅ SYSTEMET ER NU STANSET[0m
+---------------------------------------
+Tjenester stoppet:
+ - Streamlit-dashboard
+ - Docker (FastAPI + QuestDB)
+ - Virtuelt miljø deaktiveret
+ - Mosquitto forbliver kørende (systemd)
+---------------------------------------
+Stoplog gemt: /home/victor/tempprojekt/logs/stop_2025-11-11_17-46-17.log
+[36m=======================================[0m

@@ -1,0 +1,58 @@
+Starttid: tir 18 nov 16:34:45 CET 2025
+Logfil: /home/victor/tempprojekt/logs/start_2025-11-18_16-34-45.log
+---------------------------------------
+[32m[OK] Virtuelt miljø aktiveret[0m
+[32m[OK] Mosquitto kører[0m
+[==========] Running 5 tests from 4 test suites.
+[----------] Global test environment set-up.
+[----------] 2 tests from MQTTTest
+[ RUN      ] MQTTTest.ConnectToBroker
+[       OK ] MQTTTest.ConnectToBroker (0 ms)
+[ RUN      ] MQTTTest.PublishMessage
+[       OK ] MQTTTest.PublishMessage (0 ms)
+[----------] 2 tests from MQTTTest (0 ms total)
+
+[----------] 1 test from MQTTLoopbackTest
+[ RUN      ] MQTTLoopbackTest.PublishAndReceive
+[       OK ] MQTTLoopbackTest.PublishAndReceive (1128 ms)
+[----------] 1 test from MQTTLoopbackTest (1128 ms total)
+
+[----------] 1 test from DatabaseTest
+[ RUN      ] DatabaseTest.InsertAndRetrieveRecord
+❌ Fejl ved indsættelse: table measurements has no column named device_id
+/home/victor/tempprojekt/tests/test_db.cpp:10: Failure
+The difference between db.getLastTemperature() and 21.5 is 10020.5, which exceeds 0.001, where
+db.getLastTemperature() evaluates to -9999,
+21.5 evaluates to 21.5, and
+0.001 evaluates to 0.001.
+/home/victor/tempprojekt/tests/test_db.cpp:11: Failure
+The difference between db.getLastHumidity() and 40.0 is 10039, which exceeds 0.001, where
+db.getLastHumidity() evaluates to -9999,
+40.0 evaluates to 40, and
+0.001 evaluates to 0.001.
+/home/victor/tempprojekt/tests/test_db.cpp:12: Failure
+Expected equality of these values:
+  db.getLastCO2()
+    Which is: 602
+  600
+/home/victor/tempprojekt/tests/test_db.cpp:13: Failure
+The difference between db.getLastPressure() and 1007.3 is 0.36000000000001364, which exceeds 0.001, where
+db.getLastPressure() evaluates to 1007.66,
+1007.3 evaluates to 1007.3, and
+0.001 evaluates to 0.001.
+[  FAILED  ] DatabaseTest.InsertAndRetrieveRecord (1 ms)
+[----------] 1 test from DatabaseTest (1 ms total)
+
+[----------] 1 test from SensorTest
+[ RUN      ] SensorTest.ReadsValidRange
+[       OK ] SensorTest.ReadsValidRange (0 ms)
+[----------] 1 test from SensorTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 4 test suites ran. (1129 ms total)
+[  PASSED  ] 4 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] DatabaseTest.InsertAndRetrieveRecord
+
+ 1 FAILED TEST
+[31m[FEJL] Tests fejlede[0m

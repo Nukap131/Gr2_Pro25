@@ -1,0 +1,14 @@
+2025-11-28 11:23:44,681 [INFO] Dashboard starter ...
+2025-11-28 11:23:45,707 [INFO] Henter data fra API: http://fastapi-api:8000/maalinger?limit=500
+2025-11-28 11:23:45,886 [INFO] Indlæst 196 målinger
+2025-11-28 11:23:45,965 [INFO] Plotter samlet graf
+2025-11-28 11:23:47,683 [INFO] Plotter graf: udendoers_temp, alarm=12, type=high
+2025-11-28 11:23:48,147 [INFO] Plotter graf: rum_temp, alarm=22, type=high
+2025-11-28 11:23:48,292 [INFO] Plotter graf: tilluft_temp, alarm=14, type=high
+2025-11-28 11:23:48,429 [INFO] Plotter graf: effektforbrug, alarm=230, type=high
+2025-11-28 11:23:48,600 [INFO] Plotter graf: virkningsgrad, alarm=76.2, type=low
+2025-11-28 11:23:48,696 [INFO] Alarm fundet for virkningsgrad: 28 punkter
+2025-11-28 11:23:48,748 [INFO] Viser seneste 10 rådata
+2025-11-28 11:23:48,774 [INFO] Alarmstatus: ['Virkningsgrad er under grænsen 76.2']
+2025-11-28 11:23:48,806 [INFO] CSV-download genereret
+2025-11-28 11:23:48,816 [INFO] Alarmhistorik: {'udendoers_temp': 0, 'rum_temp': 0, 'tilluft_temp': 0, 'effektforbrug': 0, 'virkningsgrad': 14}

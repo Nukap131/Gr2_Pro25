@@ -1,0 +1,27 @@
+[==========] Running 5 tests from 4 test suites.
+[----------] Global test environment set-up.
+[----------] 2 tests from MQTTTest
+[ RUN      ] MQTTTest.ConnectToBroker
+[       OK ] MQTTTest.ConnectToBroker (0 ms)
+[ RUN      ] MQTTTest.PublishMessage
+[       OK ] MQTTTest.PublishMessage (0 ms)
+[----------] 2 tests from MQTTTest (0 ms total)
+
+[----------] 1 test from MQTTLoopbackTest
+[ RUN      ] MQTTLoopbackTest.PublishAndReceive
+[       OK ] MQTTLoopbackTest.PublishAndReceive (2322 ms)
+[----------] 1 test from MQTTLoopbackTest (2322 ms total)
+
+[----------] 1 test from DatabaseTest
+[ RUN      ] DatabaseTest.InsertAndRetrieveRecord
+[       OK ] DatabaseTest.InsertAndRetrieveRecord (12 ms)
+[----------] 1 test from DatabaseTest (12 ms total)
+
+[----------] 1 test from SensorTest
+[ RUN      ] SensorTest.ReadsValidRange
+[       OK ] SensorTest.ReadsValidRange (0 ms)
+[----------] 1 test from SensorTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 4 test suites ran. (2334 ms total)
+[  PASSED  ] 5 tests.

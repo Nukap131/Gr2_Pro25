@@ -1,0 +1,62 @@
+Starttid: tor 27 nov 11:55:20 CET 2025
+Logfil: /home/victor/tempprojekt/logs/start_2025-11-27_11-55-20.log
+---------------------------------------
+[32m[OK] venv aktiveret[0m
+[32m[OK] Mosquitto kører[0m
+[==========] Running 5 tests from 4 test suites.
+[----------] Global test environment set-up.
+[----------] 2 tests from MQTTTest
+[ RUN      ] MQTTTest.ConnectToBroker
+[       OK ] MQTTTest.ConnectToBroker (0 ms)
+[ RUN      ] MQTTTest.PublishMessage
+[       OK ] MQTTTest.PublishMessage (0 ms)
+[----------] 2 tests from MQTTTest (0 ms total)
+
+[----------] 1 test from MQTTLoopbackTest
+[ RUN      ] MQTTLoopbackTest.PublishAndReceive
+[       OK ] MQTTLoopbackTest.PublishAndReceive (2349 ms)
+[----------] 1 test from MQTTLoopbackTest (2349 ms total)
+
+[----------] 1 test from DatabaseTest
+[ RUN      ] DatabaseTest.InsertAndRetrieveRecord
+[       OK ] DatabaseTest.InsertAndRetrieveRecord (7 ms)
+[----------] 1 test from DatabaseTest (7 ms total)
+
+[----------] 1 test from SensorTest
+[ RUN      ] SensorTest.ReadsValidRange
+[       OK ] SensorTest.ReadsValidRange (0 ms)
+[----------] 1 test from SensorTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 4 test suites ran. (2357 ms total)
+[  PASSED  ] 5 tests.
+time="2025-11-27T11:55:24+01:00" level=warning msg="/home/victor/tempprojekt/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Network tempprojekt-net  Creating
+ Network tempprojekt-net  Created
+ Container questdb  Creating
+ Container mosquitto  Creating
+ Container questdb  Created
+ Container fastapi-api  Creating
+ Container mosquitto  Created
+ Container subscriber  Creating
+ Container subscriber  Created
+ Container fastapi-api  Created
+ Container dashboard  Creating
+ Container dashboard  Created
+ Container mosquitto  Starting
+ Container questdb  Starting
+ Container mosquitto  Started
+ Container questdb  Started
+ Container questdb  Waiting
+ Container questdb  Waiting
+ Container mosquitto  Waiting
+ Container mosquitto  Healthy
+ Container questdb  Healthy
+ Container subscriber  Starting
+ Container questdb  Healthy
+ Container fastapi-api  Starting
+ Container fastapi-api  Started
+ Container dashboard  Starting
+ Container subscriber  Started
+ Container dashboard  Started
+[32m[OK] Docker kører[0m

@@ -1,0 +1,37 @@
+Starttid: man 24 nov 13:48:43 CET 2025
+Logfil: /home/victor/tempprojekt/logs/start_2025-11-24_13-48-43.log
+---------------------------------------
+[==========] Running 5 tests from 4 test suites.
+[----------] Global test environment set-up.
+[----------] 2 tests from MQTTTest
+[ RUN      ] MQTTTest.ConnectToBroker
+[       OK ] MQTTTest.ConnectToBroker (0 ms)
+[ RUN      ] MQTTTest.PublishMessage
+[       OK ] MQTTTest.PublishMessage (0 ms)
+[----------] 2 tests from MQTTTest (0 ms total)
+
+[----------] 1 test from MQTTLoopbackTest
+[ RUN      ] MQTTLoopbackTest.PublishAndReceive
+[       OK ] MQTTLoopbackTest.PublishAndReceive (2323 ms)
+[----------] 1 test from MQTTLoopbackTest (2323 ms total)
+
+[----------] 1 test from DatabaseTest
+[ RUN      ] DatabaseTest.InsertAndRetrieveRecord
+[       OK ] DatabaseTest.InsertAndRetrieveRecord (8 ms)
+[----------] 1 test from DatabaseTest (8 ms total)
+
+[----------] 1 test from SensorTest
+[ RUN      ] SensorTest.ReadsValidRange
+[       OK ] SensorTest.ReadsValidRange (0 ms)
+[----------] 1 test from SensorTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 4 test suites ran. (2332 ms total)
+[  PASSED  ] 5 tests.
+time="2025-11-24T13:48:51+01:00" level=warning msg="/home/victor/tempprojekt/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+time="2025-11-24T13:48:51+01:00" level=warning msg="Found orphan containers ([mqtt]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container questdb  Creating
+ Container questdb  Created
+ Container fastapi-api  Running
+ Container questdb  Starting
+Error response from daemon: failed to set up container networking: driver failed programming external connectivity on endpoint questdb (2f1cb688aca5302efd2ad96cd7c4e6b745dd808d791daa30950e366a08b4729c): failed to bind host port 0.0.0.0:8812/tcp: address already in use

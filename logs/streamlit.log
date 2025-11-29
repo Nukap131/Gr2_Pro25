@@ -1,0 +1,133 @@
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.110.128:8501
+
+/home/victor/tempprojekt/app.py:39: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df["timestamp"] = pd.to_datetime(df["timestamp"])
+  Stopping...
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.110.128:8501
+
+2025-11-24 15:02:51.635 Port 8501 is already in use
+/home/victor/tempprojekt/app.py:39: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df["timestamp"] = pd.to_datetime(df["timestamp"])
+/home/victor/tempprojekt/app.py:39: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df["timestamp"] = pd.to_datetime(df["timestamp"])
+/home/victor/tempprojekt/app.py:39: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df["timestamp"] = pd.to_datetime(df["timestamp"])
+/home/victor/tempprojekt/app.py:39: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df["timestamp"] = pd.to_datetime(df["timestamp"])
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.110.128:8501
+
+  Stopping...
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.110.128:8501
+
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py
+Usage: streamlit run [OPTIONS] [TARGET] [ARGS]...
+Try 'streamlit run --help' for help.
+
+Error: Invalid value: File does not exist: /home/victor/tempprojekt/app.py

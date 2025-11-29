@@ -1,0 +1,14 @@
+=======================================
+🛑 STOPPER VENTILATIONSPROJEKT
+=======================================
+[1/5] Stopper subscriber...
+[33m[INFO] Ingen subscriber.pid fundet[0m
+[2/5] Stopper Streamlit...
+[33m[INFO] Streamlit kørte ikke[0m
+[3/5] Stopper Docker...
+no configuration file provided: not found
+[4/5] Stopper Mosquitto...
+[32m[OK] Mosquitto stoppet[0m
+---------------------------------------
+[32m✅ SYSTEMET ER STOPPET[0m
+---------------------------------------

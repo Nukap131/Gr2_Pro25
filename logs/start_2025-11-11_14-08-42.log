@@ -1,0 +1,24 @@
+=======================================
+  STARTER VENTILATIONSPROJEKT
+=======================================
+Starttid: tir 11 nov 14:08:42 CET 2025
+Logfil: /home/victor/tempprojekt/logs/start_2025-11-11_14-08-42.log
+---------------------------------------
+[1/6] Aktiverer virtuelt miljø...
+[0;32m[OK] Virtuelt miljø aktiveret[0m
+[2/6] Starter Docker-containere...
+no configuration file provided: not found
+[0;32m[OK] Docker-containere kører[0m
+[3/6] Kontrollerer container-health...
+NAMES         STATUS                    PORTS
+fastapi-api   Up 47 minutes (healthy)   0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp
+questdb       Up 47 minutes (healthy)   0.0.0.0:8812->8812/tcp, [::]:8812->8812/tcp, 0.0.0.0:9000->9000/tcp, [::]:9000->9000/tcp, 0.0.0.0:9009->9009/tcp, [::]:9009->9009/tcp
+[0;32m[HEALTHY] FastAPI-container[0m
+[0;32m[HEALTHY] QuestDB-container[0m
+[4/6] Starter Streamlit-dashboard...
+[0;32m[OK] Streamlit-dashboard kører[0m
+[5/6] Tjekker dokumentation...
+[0;32m[OK] Doxygen dokumentation fundet[0m
+[6/6] Kører diagnose...
+---------------------------------------
+[0;32m[OK] FastAPI /health svarer[0m

@@ -1,0 +1,119 @@
+Starttid: tir 18 nov 13:46:30 CET 2025
+Logfil: /home/victor/tempprojekt/logs/start_2025-11-18_13-46-30.log
+---------------------------------------
+[32m[OK] Virtuelt miljø aktiveret[0m
+[32m[OK] Mosquitto kører[0m
+[==========] Running 5 tests from 4 test suites.
+[----------] Global test environment set-up.
+[----------] 2 tests from MQTTTest
+[ RUN      ] MQTTTest.ConnectToBroker
+[       OK ] MQTTTest.ConnectToBroker (0 ms)
+[ RUN      ] MQTTTest.PublishMessage
+[       OK ] MQTTTest.PublishMessage (0 ms)
+[----------] 2 tests from MQTTTest (0 ms total)
+
+[----------] 1 test from MQTTLoopbackTest
+[ RUN      ] MQTTLoopbackTest.PublishAndReceive
+[       OK ] MQTTLoopbackTest.PublishAndReceive (2428 ms)
+[----------] 1 test from MQTTLoopbackTest (2428 ms total)
+
+[----------] 1 test from DatabaseTest
+[ RUN      ] DatabaseTest.InsertAndRetrieveRecord
+[       OK ] DatabaseTest.InsertAndRetrieveRecord (6 ms)
+[----------] 1 test from DatabaseTest (6 ms total)
+
+[----------] 1 test from SensorTest
+[ RUN      ] SensorTest.ReadsValidRange
+[       OK ] SensorTest.ReadsValidRange (0 ms)
+[----------] 1 test from SensorTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 4 test suites ran. (2434 ms total)
+[  PASSED  ] 5 tests.
+[32m[OK] Tests bestået[0m
+time="2025-11-18T13:46:35+01:00" level=warning msg="/home/victor/tempprojekt/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Network tempprojekt_default  Creating
+ Network tempprojekt_default  Created
+time="2025-11-18T13:46:35+01:00" level=warning msg="Found orphan containers ([mqtt]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container questdb  Creating
+ Container questdb  Created
+ Container fastapi-api  Creating
+ Container fastapi-api  Created
+ Container questdb  Starting
+ Container questdb  Started
+ Container questdb  Waiting
+ Container questdb  Healthy
+ Container fastapi-api  Starting
+ Container fastapi-api  Started
+[32m[OK] Docker kører[0m
+[32m[OK] Subscriber startet (PID 7902)[0m
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.110.128:8501
+
+[32m[OK] Streamlit kører[0m
+---------------------------------------
+[32m✅ SYSTEMET ER KLART[0m
+Mosquitto → 1883
+Subscriber PID → 7902
+Streamlit → http://localhost:8501
+---------------------------------------
+2025-11-18 17:06:29.446 Uncaught app execution
+Traceback (most recent call last):
+  File "/home/victor/tempprojekt/venv/lib/python3.11/site-packages/pandas/io/sql.py", line 2664, in execute
+    cur.execute(sql, *args)
+sqlite3.OperationalError: no such column: timestamp
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/victor/tempprojekt/venv/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/victor/tempprojekt/venv/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/victor/tempprojekt/app.py", line 42, in <module>
+    df = load_data()
+         ^^^^^^^^^^^
+  File "/home/victor/tempprojekt/venv/lib/python3.11/site-packages/streamlit/runtime/caching/cache_utils.py", line 228, in __call__
+    return self._get_or_create_cached_value(args, kwargs, spinner_message)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/victor/tempprojekt/venv/lib/python3.11/site-packages/streamlit/runtime/caching/cache_utils.py", line 270, in _get_or_create_cached_value
+    return self._handle_cache_miss(cache, value_key, func_args, func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/victor/tempprojekt/venv/lib/python3.11/site-packages/streamlit/runtime/caching/cache_utils.py", line 329, in _handle_cache_miss
+    computed_value = self._info.func(*func_args, **func_kwargs)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/victor/tempprojekt/app.py", line 14, in load_data
+    df = pd.read_sql_query(
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/victor/tempprojekt/venv/lib/python3.11/site-packages/pandas/io/sql.py", line 528, in read_sql_query
+    return pandas_sql.read_query(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/victor/tempprojekt/venv/lib/python3.11/site-packages/pandas/io/sql.py", line 2728, in read_query
+    cursor = self.execute(sql, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/victor/tempprojekt/venv/lib/python3.11/site-packages/pandas/io/sql.py", line 2676, in execute
+    raise ex from exc
+pandas.errors.DatabaseError: Execution failed on sql '
+        SELECT timestamp, temperatur, fugt, co2, pressure, device
+        FROM measurements
+        ORDER BY timestamp DESC
+        LIMIT 500
+        ': no such column: timestamp
+2025-11-18 17:16:06.018 Uncaught app execution
+Traceback (most recent call last):
+  File "/home/victor/tempprojekt/venv/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/victor/tempprojekt/venv/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/victor/tempprojekt/app.py", line 113, in <module>
+    st._rerun()
+    ^^^^^^^^^
+AttributeError: module 'streamlit' has no attribute '_rerun'
+  Stopping...
