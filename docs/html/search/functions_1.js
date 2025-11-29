@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['get_5fmeasurements_0',['get_measurements',['../namespacemain.html#acda4f4de7dba3bb8935a89057c6bfce6',1,'main']]]
+  ['get_5fdata_0',['get_data',['../namespacemain.html#af19ee56522c46fe618be5548b3cffd77',1,'main']]]
 ];

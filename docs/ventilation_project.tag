@@ -66,16 +66,16 @@
     <namespace>main</namespace>
     <member kind="function">
       <type>def</type>
-      <name>get_measurements</name>
+      <name>hent_maaligner</name>
       <anchorfile>namespacemain.html</anchorfile>
-      <anchor>acda4f4de7dba3bb8935a89057c6bfce6</anchor>
-      <arglist>()</arglist>
+      <anchor>adcc577ac810100bf34b13a18bafc08dc</anchor>
+      <arglist>(int limit=200)</arglist>
     </member>
     <member kind="function">
       <type>def</type>
-      <name>health_check</name>
+      <name>sundhed</name>
       <anchorfile>namespacemain.html</anchorfile>
-      <anchor>a5753cbfa3659b97c9bb83bd24a8c3669</anchor>
+      <anchor>aaaa2b67ec3b353b4a651b9f64a9b4a7d</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable">
@@ -86,17 +86,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type></type>
-      <name>host</name>
+      <type>string</type>
+      <name>QUESTDB_URL</name>
       <anchorfile>namespacemain.html</anchorfile>
-      <anchor>a0cf58d9b4a444874a8cf80fdf162b0fb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type></type>
-      <name>port</name>
-      <anchorfile>namespacemain.html</anchorfile>
-      <anchor>a12fac67ac230690557ab76d3faa71d8c</anchor>
+      <anchor>ab2b95cf44349b7373d2edd349b7b9c06</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -109,6 +102,13 @@
     <name>tjek_temp.cpp</name>
     <path>/home/victor/tempprojekt/</path>
     <filename>tjek__temp_8cpp.html</filename>
+    <member kind="function" static="yes">
+      <type>static int</type>
+      <name>callback</name>
+      <anchorfile>tjek__temp_8cpp.html</anchorfile>
+      <anchor>ae5029c6714b7b77296aa2096b846b6be</anchor>
+      <arglist>(void *NotUsed, int argc, char **argv, char **azColName)</arglist>
+    </member>
     <member kind="function">
       <type>int</type>
       <name>main</name>
@@ -122,16 +122,16 @@
     <filename>namespacemain.html</filename>
     <member kind="function">
       <type>def</type>
-      <name>get_measurements</name>
+      <name>hent_maaligner</name>
       <anchorfile>namespacemain.html</anchorfile>
-      <anchor>acda4f4de7dba3bb8935a89057c6bfce6</anchor>
-      <arglist>()</arglist>
+      <anchor>adcc577ac810100bf34b13a18bafc08dc</anchor>
+      <arglist>(int limit=200)</arglist>
     </member>
     <member kind="function">
       <type>def</type>
-      <name>health_check</name>
+      <name>sundhed</name>
       <anchorfile>namespacemain.html</anchorfile>
-      <anchor>a5753cbfa3659b97c9bb83bd24a8c3669</anchor>
+      <anchor>aaaa2b67ec3b353b4a651b9f64a9b4a7d</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable">
@@ -142,17 +142,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type></type>
-      <name>host</name>
+      <type>string</type>
+      <name>QUESTDB_URL</name>
       <anchorfile>namespacemain.html</anchorfile>
-      <anchor>a0cf58d9b4a444874a8cf80fdf162b0fb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type></type>
-      <name>port</name>
-      <anchorfile>namespacemain.html</anchorfile>
-      <anchor>a12fac67ac230690557ab76d3faa71d8c</anchor>
+      <anchor>ab2b95cf44349b7373d2edd349b7b9c06</anchor>
       <arglist></arglist>
     </member>
   </compound>

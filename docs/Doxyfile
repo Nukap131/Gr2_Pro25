@@ -1,0 +1,53 @@
+#---------------------------------------------------------------------------
+# Doxyfile for Ventilationsprojektet
+#---------------------------------------------------------------------------
+
+PROJECT_NAME           = "Ventilationsprojekt - Model A"
+PROJECT_NUMBER         = "1.0"
+PROJECT_BRIEF          = "IoT system med MQTT, FastAPI, QuestDB og Streamlit"
+
+OUTPUT_DIRECTORY       = "./html"
+GENERATE_HTML          = YES
+HTML_OUTPUT            = "."
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+OPTIMIZE_OUTPUT_FOR_C  = NO
+OPTIMIZE_OUTPUT_JAVA   = NO
+OPTIMIZE_FOR_FORTRAN   = NO
+OPTIMIZE_OUTPUT_VHDL   = NO
+
+INPUT                  = ../subscriber ../api ../dashboard
+FILE_PATTERNS          = *.py
+
+RECURSIVE              = YES
+
+GENERATE_LATEX         = NO
+GENERATE_XML           = NO
+GENERATE_RTF           = NO
+GENERATE_MAN           = NO
+
+CASE_SENSE_NAMES       = NO
+SHOW_USED_FILES        = YES
+FULL_PATH_NAMES        = NO
+
+QUIET                  = NO
+WARNINGS               = YES
+
+HAVE_DOT               = YES
+DOT_IMAGE_FORMAT       = png
+DOT_TRANSPARENT        = YES
+DOT_CLEANUP            = YES
+
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+DOT_GRAPH_MAX_NODES    = 50
+
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = YES
+STRIP_CODE_COMMENTS    = NO
+EXTRACT_LOCAL_METHODS  = YES
+
+JAVADOC_AUTOBRIEF      = YES
+PYTHON_DOCSTRING       = YES

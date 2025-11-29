@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['logger_0',['logger',['../example__modbus__logging_8cpp.html#a6466125bff130f180475d3b2453eb5bc',1,'example_modbus_logging.cpp']]]
+  ['health_0',['health',['../namespacemain.html#a238ab68ccf7cbfe5e095908ae67399ed',1,'main']]],
+  ['hist50_1',['hist50',['../namespaceapp.html#a17ee6eebe90c97f2de3cedcdffd5d13b',1,'app']]]
 ];

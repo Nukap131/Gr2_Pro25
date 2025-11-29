@@ -86,36 +86,76 @@ $(document).ready(function(){initNavTree('tjek__temp_8cpp_source.html',''); init
   <div class="headertitle"><div class="title">tjek_temp.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="tjek__temp_8cpp.html">Hop til denne fils dokumentation.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;spdlog/spdlog.h&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;spdlog/sinks/basic_file_sink.h&quot;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="tjek__temp_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   35</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="tjek__temp_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">try</span> {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="comment">// Opretter en basic file logger, der skriver til &quot;systemlog.txt&quot;</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">auto</span> <a class="code hl_function" href="example__modbus__logging_8cpp.html#a6466125bff130f180475d3b2453eb5bc">logger</a> = spdlog::basic_logger_mt(<span class="stringliteral">&quot;file_logger&quot;</span>, <span class="stringliteral">&quot;systemlog.txt&quot;</span>);</div>
+<a href="tjek__temp_8cpp.html">Hop til denne fils dokumentation.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;sqlite3.h&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;spdlog/spdlog.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;spdlog/sinks/basic_file_sink.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// Callback for at printe værdier fra DB</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="tjek__temp_8cpp.html#ae5029c6714b7b77296aa2096b846b6be">    9</a></span><span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="tjek__temp_8cpp.html#ae5029c6714b7b77296aa2096b846b6be">callback</a>(<span class="keywordtype">void</span>* NotUsed, <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv, <span class="keywordtype">char</span>** azColName) {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; argc; i++) {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        std::cout &lt;&lt; azColName[i] &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; (argv[i] ? argv[i] : <span class="stringliteral">&quot;NULL&quot;</span>) &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    }</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;-------------------------&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="tjek__temp_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   17</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="tjek__temp_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">bool</span> ok = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="comment">// Logger starter</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">auto</span> <a class="code hl_function" href="example__modbus__logging_8cpp.html#a6466125bff130f180475d3b2453eb5bc">logger</a> = spdlog::basic_logger_mt(<span class="stringliteral">&quot;tjek_logger&quot;</span>, <span class="stringliteral">&quot;systemlog.txt&quot;</span>);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_function" href="example__modbus__logging_8cpp.html#a6466125bff130f180475d3b2453eb5bc">logger</a>-&gt;info(<span class="stringliteral">&quot;tjek_temp startet&quot;</span>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">// 1. Check systemlog.txt findes</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    std::ifstream logfile(<span class="stringliteral">&quot;systemlog.txt&quot;</span>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">if</span> (!logfile.is_open()) {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <a class="code hl_function" href="example__modbus__logging_8cpp.html#a6466125bff130f180475d3b2453eb5bc">logger</a>-&gt;error(<span class="stringliteral">&quot;systemlog.txt mangler eller kan ikke åbnes&quot;</span>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        ok = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">// 2. Åbn SQLite</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    sqlite3* DB;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    std::string dbPath = <span class="stringliteral">&quot;/home/victor/tempprojekt/sensordata.db&quot;</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">if</span> (sqlite3_open(dbPath.c_str(), &amp;DB) != SQLITE_OK) {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_function" href="example__modbus__logging_8cpp.html#a6466125bff130f180475d3b2453eb5bc">logger</a>-&gt;error(<span class="stringliteral">&quot;Kan ikke åbne SQLite database&quot;</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="comment">// Informationsbeskeder</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_function" href="example__modbus__logging_8cpp.html#a6466125bff130f180475d3b2453eb5bc">logger</a>-&gt;info(<span class="stringliteral">&quot;System startet&quot;</span>);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_function" href="example__modbus__logging_8cpp.html#a6466125bff130f180475d3b2453eb5bc">logger</a>-&gt;info(<span class="stringliteral">&quot;Sensorværdi læst: {}&quot;</span>, 23.7);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="comment">// Advarsel</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <a class="code hl_function" href="example__modbus__logging_8cpp.html#a6466125bff130f180475d3b2453eb5bc">logger</a>-&gt;warn(<span class="stringliteral">&quot;Lav spænding målt&quot;</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_function" href="example__modbus__logging_8cpp.html#a6466125bff130f180475d3b2453eb5bc">logger</a>-&gt;info(<span class="stringliteral">&quot;Database åbnet korrekt&quot;</span>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">// 3. Kør SQL – NYE FELTNAVNE</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* sql =</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="stringliteral">&quot;SELECT timestamp, temperatur, fugt, co2, pressure, device &quot;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="stringliteral">&quot;FROM measurements ORDER BY timestamp DESC LIMIT 5;&quot;</span>;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="comment">// Fejl</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_function" href="example__modbus__logging_8cpp.html#a6466125bff130f180475d3b2453eb5bc">logger</a>-&gt;error(<span class="stringliteral">&quot;Fejl: Sensor ikke forbundet&quot;</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">char</span>* errorMessage;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">int</span> rc = sqlite3_exec(DB, sql, <a class="code hl_function" href="tjek__temp_8cpp.html#ae5029c6714b7b77296aa2096b846b6be">callback</a>, 0, &amp;errorMessage);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="comment">// Luk loggeren ned korrekt</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        spdlog::shutdown();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    } <span class="keywordflow">catch</span> (<span class="keyword">const</span> spdlog::spdlog_ex &amp;ex) {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Logfejl: &quot;</span> &lt;&lt; ex.what() &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">if</span> (rc != SQLITE_OK) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_function" href="example__modbus__logging_8cpp.html#a6466125bff130f180475d3b2453eb5bc">logger</a>-&gt;error(std::string(<span class="stringliteral">&quot;SQL-fejl: &quot;</span>) + errorMessage);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        sqlite3_free(errorMessage);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        sqlite3_close(DB);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// 4. Afslut database</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    sqlite3_close(DB);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_function" href="example__modbus__logging_8cpp.html#a6466125bff130f180475d3b2453eb5bc">logger</a>-&gt;info(<span class="stringliteral">&quot;tjek_temp gennemført uden fejl&quot;</span>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">if</span> (!ok) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_function" href="example__modbus__logging_8cpp.html#a6466125bff130f180475d3b2453eb5bc">logger</a>-&gt;error(<span class="stringliteral">&quot;En eller flere checks fejlede&quot;</span>);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
 <div class="ttc" id="aexample__modbus__logging_8cpp_html_a6466125bff130f180475d3b2453eb5bc"><div class="ttname"><a href="example__modbus__logging_8cpp.html#a6466125bff130f180475d3b2453eb5bc">logger</a></div><div class="ttdeci">*hvor værdierne logges med spdlog og gemmes i SQLite **code *DataLogger logger(&quot;modbus_data.db&quot;, &quot;systemlog.txt&quot;)</div></div>
-<div class="ttc" id="atjek__temp_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="tjek__temp_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">Main-funktion der tester logning med spdlog.</div><div class="ttdef"><b>Definition:</b> <a href="tjek__temp_8cpp_source.html#l00035">tjek_temp.cpp:35</a></div></div>
+<div class="ttc" id="atjek__temp_8cpp_html_ae5029c6714b7b77296aa2096b846b6be"><div class="ttname"><a href="tjek__temp_8cpp.html#ae5029c6714b7b77296aa2096b846b6be">callback</a></div><div class="ttdeci">static int callback(void *NotUsed, int argc, char **argv, char **azColName)</div><div class="ttdef"><b>Definition:</b> <a href="tjek__temp_8cpp_source.html#l00009">tjek_temp.cpp:9</a></div></div>
+<div class="ttc" id="atjek__temp_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="tjek__temp_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="tjek__temp_8cpp_source.html#l00017">tjek_temp.cpp:17</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

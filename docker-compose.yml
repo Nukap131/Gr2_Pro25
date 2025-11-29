@@ -1,9 +1,23 @@
 version: "3.9"
 
 services:
-  # ==========================================
-  # QUESTDB DATABASE
-  # ==========================================
+
+  mosquitto:
+    image: eclipse-mosquitto:2
+    container_name: mosquitto
+    restart: always
+    ports:
+      - "1884:1883"
+    volumes:
+      - ./mosquitto:/mosquitto
+      - ./logs/mosquitto:/var/log/mosquitto
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z localhost 1883 || exit 1"]
+      interval: 5s
+      retries: 5
+    networks:
+      - default
+
   questdb:
     image: questdb/questdb:latest
     container_name: questdb
@@ -14,18 +28,39 @@ services:
       - "9009:9009"
     volumes:
       - questdb_data:/var/lib/questdb
+      - ./logs/questdb:/var/log/questdb
     healthcheck:
       test: ["CMD-SHELL", "grep -q ':2328' /proc/net/tcp || exit 1"]
-      interval: 10s
-      timeout: 3s
-      retries: 6
-      start_period: 15s
+      interval: 5s
+      retries: 5
+    networks:
+      - default
 
-  # ==========================================
-  # FASTAPI BACKEND
-  # ==========================================
+  subscriber:
+    build:
+      context: ./subscriber
+      dockerfile: Dockerfile
+    container_name: subscriber
+    restart: always
+    depends_on:
+      mosquitto:
+        condition: service_healthy
+      questdb:
+        condition: service_healthy
+    environment:
+      - MQTT_BROKER=mosquitto
+      - MQTT_PORT=1883
+      - QUESTDB_HTTP=http://questdb:9000/exec
+    volumes:
+      - ./subscriber:/app
+      - ./logs/subscriber:/var/log/subscriber
+    networks:
+      - default
+
   fastapi-api:
-    build: .
+    build:
+      context: ./api
+      dockerfile: Dockerfile
     container_name: fastapi-api
     restart: always
     depends_on:
@@ -33,21 +68,31 @@ services:
         condition: service_healthy
     ports:
       - "8000:8000"
-    environment:
-      - DATABASE_URL=postgresql://admin:quest@questdb:8812/qdb
-      - MQTT_BROKER=localhost
-      - MQTT_PORT=1883
     volumes:
-      - ./sensordata.db:/app/sensordata.db
-    healthcheck:
-      test: ["CMD-SHELL", "curl -fs http://localhost:8000/health || exit 1"]
-      interval: 20s
-      timeout: 10s
-      retries: 5
-      start_period: 30s
+      - ./api:/app
+      - ./logs/api:/var/log/api
+    networks:
+      - default
 
-# ==========================================
-#  PERSISTENTE DATA-VOLUMES
-# ==========================================
+  dashboard:
+    build:
+      context: ./dashboard
+      dockerfile: Dockerfile.dashboard
+    container_name: dashboard
+    restart: always
+    depends_on:
+      - fastapi-api
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./dashboard:/app
+      - ./logs/dashboard:/var/log/dashboard
+    networks:
+      - default
+
 volumes:
   questdb_data:
+
+networks:
+  default:
+    name: tempprojekt-net

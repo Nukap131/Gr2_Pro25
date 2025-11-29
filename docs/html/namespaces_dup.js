@@ -1,10 +1,9 @@
 var namespaces_dup =
 [
     [ "main", "namespacemain.html", [
-      [ "get_measurements", "namespacemain.html#acda4f4de7dba3bb8935a89057c6bfce6", null ],
-      [ "health_check", "namespacemain.html#a5753cbfa3659b97c9bb83bd24a8c3669", null ],
+      [ "hent_maaligner", "namespacemain.html#adcc577ac810100bf34b13a18bafc08dc", null ],
+      [ "sundhed", "namespacemain.html#aaaa2b67ec3b353b4a651b9f64a9b4a7d", null ],
       [ "app", "namespacemain.html#a5fa94f0581009434c7a63791944d6ff4", null ],
-      [ "host", "namespacemain.html#a0cf58d9b4a444874a8cf80fdf162b0fb", null ],
-      [ "port", "namespacemain.html#a12fac67ac230690557ab76d3faa71d8c", null ]
+      [ "QUESTDB_URL", "namespacemain.html#ab2b95cf44349b7373d2edd349b7b9c06", null ]
     ] ]
 ];

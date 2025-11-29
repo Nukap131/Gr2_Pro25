@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['main_0',['main',['../namespacemain.html',1,'main'],['../health_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;health.cpp'],['../example__modbus__logging_8cpp.html#a8965bda0040a456687b3ecaa82a03a20',1,'main():&#160;example_modbus_logging.cpp'],['../tjek__temp_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;tjek_temp.cpp']]],
-  ['main_2epy_1',['main.py',['../main_8py.html',1,'']]]
+  ['label_0',['label',['../namespaceapp.html#a61d300bbfa7ecfc1ea9e7338c605e97a',1,'app']]],
+  ['latest_1',['latest',['../namespaceapp.html#a753f03fa02f5e08e094610a33d9afdd4',1,'app']]],
+  ['load_2',['load',['../namespaceapp.html#a06ea0d119ee97b7ad56c7adfadad9297',1,'app']]],
+  ['log_3',['log',['../namespacesubscriber.html#a20f280c3f90b93e8d1aef1b81677e14d',1,'subscriber.log()'],['../namespacemain.html#a42a646245af79275c638f619293dfe07',1,'main.log()'],['../namespaceapp.html#a884fd4d09ca9554dcf7342873cfe19ee',1,'app.log()']]]
 ];
